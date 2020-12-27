@@ -1,0 +1,15 @@
+#container {
+  height: 90vh;
+}
+
+#main {
+  background-image: url("../../../assets/bg-home.png");
+  background-color: #10172c;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  /* bottom: -2rem; */
+}
