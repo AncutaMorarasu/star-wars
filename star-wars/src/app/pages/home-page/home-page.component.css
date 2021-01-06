@@ -1,5 +1,5 @@
 #container {
-  height: 90vh;
+  height: 80vh;
 }
 
 #main {
@@ -12,4 +12,9 @@
   background-size: contain;
   position: relative;
   /* bottom: -2rem; */
+}
+@media screen and (max-width: 991px) {
+  #container {
+    height: 70vh;
+  }
 }

@@ -9,6 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FilmsPageComponent } from './pages/films-page/films-page.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { PlanetsPageComponent } from './pages/planets-page/planets-page.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PlanetsPageComponent } from './pages/planets-page/planets-page.componen
     HomePageComponent,
     FilmsPageComponent,
     CharactersPageComponent,
-    PlanetsPageComponent
+    PlanetsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
