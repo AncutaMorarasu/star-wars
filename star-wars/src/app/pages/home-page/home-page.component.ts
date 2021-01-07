@@ -8,11 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {
-    fetch('https://swapi.dev/api/people/')
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result.results);
-      });
-  }
+  ngOnInit(): void {}
 }
