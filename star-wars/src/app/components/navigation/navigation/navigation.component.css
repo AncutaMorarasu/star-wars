@@ -72,6 +72,9 @@ img {
   top: 17px;
   right: 17px;
 }
+.fa-search {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 991px) {
   .nav-wrapper {
