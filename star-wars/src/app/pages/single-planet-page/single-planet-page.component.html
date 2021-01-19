@@ -1,1 +1,52 @@
-<p>single-planet-page works!</p>
+<div class="content">
+  <div class="general">
+    <p class="details">Planetdetails</p>
+    <hr />
+    <h1>{{ planet?.name }}</h1>
+  </div>
+  <div class="film-details d-flex flex-row justify-content-between">
+    <div class="details-left">
+      <h3>Details:</h3>
+      <p class="details-p m-0">
+        Rotation period: <span>{{ planet?.rotation_period }}</span>
+      </p>
+      <p class="details-p m-0">
+        Climate: <span>{{ planet?.climate }}</span>
+      </p>
+      <p class="details-p m-0">
+        Gravity: <span>{{ planet?.gravity }}</span>
+      </p>
+      <p class="details-p m-0">
+        Terrain: <span>{{ planet?.terrain }}</span>
+      </p>
+      <p class="details-p m-0">
+        Population: <span>{{ planet?.population }}</span>
+      </p>
+      <p class="details-p m-0">
+        Diameter: <span>{{ planet?.diameter }}</span>
+      </p>
+    </div>
+    <img
+      src="{{ imgSrc }}"
+      alt="character image"
+      onerror="this.src = 'assets/pictures/placeholder.png';"
+    />
+  </div>
+  <div class="extras">
+    <h3>Filme:</h3>
+    <app-film-link *ngFor="let film of planet?.films" [filmLink]="film">
+    </app-film-link>
+
+    <h3 *ngIf="planet?.residents.length != 0">Residents:</h3>
+    <app-character-link
+      *ngFor="let resident of planet?.residents"
+      [link]="resident"
+    ></app-character-link>
+    <!-- <h3 *ngIf="character?.vehicles.length != 0">Fahrzeuge:</h3>
+      <app-vehicles-link
+        *ngFor="let vehicle of character?.vehicles"
+        [vehiclesLink]="vehicle"
+      >
+      </app-vehicles-link>  -->
+  </div>
+</div>

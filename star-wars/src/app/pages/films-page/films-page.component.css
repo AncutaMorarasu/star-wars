@@ -25,6 +25,7 @@ h1 {
 img {
   width: 333px;
   height: 350px;
+  cursor: pointer;
 }
 .film-info {
   margin: 24px;

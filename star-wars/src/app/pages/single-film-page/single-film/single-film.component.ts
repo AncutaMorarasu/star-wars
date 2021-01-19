@@ -32,7 +32,6 @@ export class SingleFilmComponent implements OnInit {
     });
     this.filmService.getFilmById(this.episodeId).subscribe((data: any) => {
       this.movie = data;
-      console.log(this.movie);
     });
   }
 

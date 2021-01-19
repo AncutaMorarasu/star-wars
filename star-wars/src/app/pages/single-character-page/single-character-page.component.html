@@ -1,1 +1,60 @@
-<p>single-character-page works!</p>
+<div class="content">
+  <div class="general">
+    <p class="details">Charakterdetails</p>
+    <hr />
+    <h1>{{ character?.name }}</h1>
+  </div>
+  <div class="film-details d-flex flex-row justify-content-between">
+    <div class="details-left">
+      <h3>Details:</h3>
+      <p class="details-p m-0">
+        Größe: <span>{{ character?.height }}</span>
+      </p>
+      <p class="details-p m-0">
+        Gewicht: <span>{{ character?.mass }}</span>
+      </p>
+      <p class="details-p m-0">
+        Haarfarbe: <span>{{ character?.hair_color }}</span>
+      </p>
+      <p class="details-p m-0">
+        Augenfarbe: <span>{{ character?.eye_color }}</span>
+      </p>
+      <p class="details-p m-0">
+        Geburtsjahr: <span>{{ character?.birth_year }}</span>
+      </p>
+      <p class="details-p m-0">
+        Geschlecht: <span>{{ character?.gender }}</span>
+      </p>
+
+      <div class="mt-4 d-flex align-items-center">
+        <p class="details-p mr-2">Heimatplanet:</p>
+        <app-planets-link
+          *ngIf="character"
+          [planetLink]="character.homeworld"
+        ></app-planets-link>
+      </div>
+    </div>
+    <img
+      src="{{ imgSrc }}"
+      alt="character image"
+      onerror="this.src = 'assets/pictures/placeholder.png';"
+    />
+  </div>
+  <div class="extras">
+    <h3>Filme:</h3>
+    <app-film-link *ngFor="let film of character?.films" [filmLink]="film">
+    </app-film-link>
+
+    <h3 *ngIf="character?.starships.length != 0">Raumschiffe:</h3>
+    <app-starships-link
+      *ngFor="let starship of character?.starships"
+      [starshipLink]="starship"
+    ></app-starships-link>
+    <h3 *ngIf="character?.vehicles.length != 0">Fahrzeuge:</h3>
+    <app-vehicles-link
+      *ngFor="let vehicle of character?.vehicles"
+      [vehiclesLink]="vehicle"
+    >
+    </app-vehicles-link>
+  </div>
+</div>

@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'planeten', component: PlanetsPageComponent },
   { path: 'filme/:id', component: SingleFilmComponent },
   { path: 'charaktere/:id', component: SingleCharacterPageComponent },
-  { path: 'planete/:id', component: SinglePlanetPageComponent },
+  { path: 'planeten/:id', component: SinglePlanetPageComponent },
 ];
 
 @NgModule({

@@ -1,1 +1,22 @@
-<p>planets-page works!</p>
+<div
+  class="container d-flex flex-column justify-content-center align-items-center"
+>
+  <h1>Planets</h1>
+  <div class="film-list d-flex flex-row flex-wrap">
+    <div class="thumbnail d-flex flex-column" *ngFor="let planet of planets">
+      <img
+        src="{{ planet.image }}"
+        alt="movie image"
+        [routerLink]="['/planeten', planet.id]"
+        onerror="this.src = 'assets/pictures/placeholder.png';"
+      />
+      <div class="film-info">
+        <h3 [routerLink]="['/planeten', planet.id]">{{ planet.name }}</h3>
+        <p>Rotation period: {{ planet.rotation_period }}</p>
+        <p>Climate: {{ planet.climate }}</p>
+        <p class="last-p">Terrain: {{ planet.terrain }}</p>
+        <a [routerLink]="['/planeten', planet.id]">Mehr informationen...</a>
+      </div>
+    </div>
+  </div>
+</div>

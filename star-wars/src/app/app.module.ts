@@ -20,6 +20,7 @@ import { PlanetsLinkComponent } from './components/planets-link/planets-link.com
 import { SinglePlanetPageComponent } from './pages/single-planet-page/single-planet-page.component';
 import { StarshipsLinkComponent } from './components/starships-link/starships-link.component';
 import { VehiclesLinkComponent } from './components/vehicles-link/vehicles-link.component';
+import { FilmLinkComponent } from './components/film-link/film-link.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { VehiclesLinkComponent } from './components/vehicles-link/vehicles-link.
     SinglePlanetPageComponent,
     StarshipsLinkComponent,
     VehiclesLinkComponent,
+    FilmLinkComponent,
   ],
   imports: [
     BrowserModule,

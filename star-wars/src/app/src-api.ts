@@ -34,7 +34,7 @@ export const filmsImg = [
 export const characterImg = [
   {
     id: 1,
-    src: 'assets/pictures/luke.png',
+    src: 'assets/pictures/luke.jpeg',
   },
   {
     id: 2,
@@ -59,5 +59,32 @@ export const characterImg = [
   {
     id: 14,
     src: 'assets/pictures/han.png',
+  },
+];
+
+export const planetSrc = [
+  {
+    id: 1,
+    src: 'assets/pictures/p1.png',
+  },
+  {
+    id: 2,
+    src: 'assets/pictures/p2.png',
+  },
+  {
+    id: 3,
+    src: 'assets/pictures/p3.png',
+  },
+  {
+    id: 4,
+    src: 'assets/pictures/p4.png',
+  },
+  {
+    id: 5,
+    src: 'assets/pictures/p5.png',
+  },
+  {
+    id: 6,
+    src: 'assets/pictures/p6.png',
   },
 ];
