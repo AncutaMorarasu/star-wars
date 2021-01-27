@@ -1,1 +1,30 @@
-<p>characters-page works!</p>
+<div
+  class="container d-flex flex-column justify-content-center align-items-center"
+>
+  <h1 class="h1-list">Charaktere</h1>
+  <div class="list d-flex flex-row flex-wrap">
+    <div
+      class="thumbnail d-flex flex-column"
+      *ngFor="let character of characters"
+    >
+      <img
+        class="img-list"
+        src="{{ character.image }}"
+        alt="character image"
+        [routerLink]="['/charaktere', character.id]"
+        onerror="this.src = 'assets/pictures/placeholder.png';"
+      />
+      <div class="film-info">
+        <h3 [routerLink]="['/charaktere', character.id]">
+          {{ character.name }}
+        </h3>
+        <p>Größe: {{ character.height }}</p>
+        <p>Gewicht: {{ character.mass }}</p>
+        <p class="last-p">Haarfarbe: {{ character.hair_color }}</p>
+        <a [routerLink]="['/charaktere', character.id]"
+          >Mehr informationen...</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

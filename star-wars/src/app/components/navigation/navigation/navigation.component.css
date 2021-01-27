@@ -34,9 +34,8 @@ img {
 }
 
 .nav-link {
-  padding-bottom: 0;
+  padding: 0 0 0.2rem 0 !important;
 }
-
 .navbar-nav {
   margin-top: -15px;
 }
@@ -72,6 +71,9 @@ img {
   top: 17px;
   right: 17px;
 }
+.fa-search {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 991px) {
   .nav-wrapper {
@@ -87,9 +89,6 @@ img {
     display: flex;
     flex-direction: column;
   }
-  /* .show {
-    margin-left: 5%;
-  } */
 
   .navbar-nav {
     align-items: flex-end;

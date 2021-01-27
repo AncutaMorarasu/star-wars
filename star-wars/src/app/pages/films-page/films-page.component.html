@@ -1,16 +1,21 @@
 <div
   class="container d-flex flex-column justify-content-center align-items-center"
 >
-  <h1>Filme</h1>
-  <div class="film-list d-flex flex-row flex-wrap">
+  <h1 class="h1-list">Filme</h1>
+  <div class="list d-flex flex-row flex-wrap">
     <div class="thumbnail d-flex flex-column" *ngFor="let movie of movies">
-      <img src="{{ movie.image }}" alt="" />
+      <img
+        class="img-list"
+        src="{{ movie.image }}"
+        alt="movie image"
+        [routerLink]="['/filme', movie.id]"
+      />
       <div class="film-info">
-        <h3>{{ movie.title }}</h3>
+        <h3 [routerLink]="['/filme', movie.id]">{{ movie.title }}</h3>
         <p>Director: {{ movie.director }}</p>
         <p>Produzenten: {{ movie.producer }}</p>
         <p class="last-p">Erscheinungsdatum: {{ movie.release_date }}</p>
-        <a href="">Mehr informationen...</a>
+        <a [routerLink]="['/filme', movie.id]">Mehr informationen...</a>
       </div>
     </div>
   </div>

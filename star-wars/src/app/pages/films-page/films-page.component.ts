@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { filmsImg } from 'src/app/src-api';
+import { FilmsApiService } from 'src/app/services/films-api.service';
 
 @Component({
   selector: 'app-films-page',
@@ -8,22 +9,21 @@ import { filmsImg } from 'src/app/src-api';
 })
 export class FilmsPageComponent implements OnInit {
   movies = [];
-  constructor() {}
+  constructor(private filmService: FilmsApiService) {}
 
   ngOnInit(): void {
-    fetch('https://swapi.dev/api/films/')
-      .then((response) => response.json())
-      .then((result) => {
-        this.movies = result.results;
-        //loop through array of movies, if an episode id matches the id from image source API, a new property is added to movie object
+    this.filmService.getAllFilms().subscribe((data) => {
+      this.movies = data['results'];
+      this.movies.forEach((entry) => {
+        entry['id'] = this.movies.indexOf(entry) + 1;
+        //loop through array of image source api, if an episode id matches the id from image source API, a new property is added to movie object
         //new property is 'image' used for the img src in HTML template
-        this.movies.forEach(function (entry) {
-          for (var k = 0; k < filmsImg.length; k++) {
-            if (filmsImg[k].id == entry.episode_id) {
-              entry['image'] = filmsImg[k].src;
-            }
+        for (let srcImage of filmsImg) {
+          if (srcImage.id === entry.id) {
+            entry['image'] = srcImage.src;
           }
-        });
+        }
       });
+    });
   }
 }

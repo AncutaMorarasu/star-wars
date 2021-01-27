@@ -1,0 +1,52 @@
+<div class="content">
+  <div class="general">
+    <p class="details">Filmdetails</p>
+    <hr />
+    <h1>{{ movie?.title }}</h1>
+    <p class="details mt-0">Episode {{ romanNumeral }}</p>
+  </div>
+  <div class="film-details d-flex flex-row justify-content-between">
+    <div class="details-left">
+      <h3>Details:</h3>
+      <p class="details-p m-0">
+        Director: <span>{{ movie?.director }}</span>
+      </p>
+      <p class="details-p m-0">
+        Produzenten: <span>{{ movie?.producer }}</span>
+      </p>
+      <p class="details-p m-0">
+        Erscheinungsdatum: <span>{{ movie?.release_date }}</span>
+      </p>
+      <p class="mt">{{ movie?.opening_crawl }}</p>
+    </div>
+    <img src="{{ imgSrc }}" alt="movie image" />
+  </div>
+  <div class="extras">
+    <h3>Charaktere:</h3>
+    <div class="">
+      <app-character-link
+        *ngFor="let character of movie?.characters"
+        [link]="character"
+      ></app-character-link>
+      <app-add-character class="d-inline-block"></app-add-character>
+    </div>
+    <h3>Planete:</h3>
+    <app-planets-link
+      *ngFor="let planet of movie?.planets"
+      [planetLink]="planet"
+    ></app-planets-link>
+
+    <h3>Raumschiffe:</h3>
+    <app-starships-link
+      *ngFor="let starship of movie?.starships"
+      [starshipLink]="starship"
+    ></app-starships-link>
+    <h3>Fahrzeuge:</h3>
+    <app-vehicles-link
+      *ngFor="let vehicle of movie?.vehicles"
+      [vehiclesLink]="vehicle"
+    >
+    </app-vehicles-link>
+  </div>
+</div>
+<p></p>

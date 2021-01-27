@@ -1,5 +1,5 @@
-.container,
-.film-list {
+/* .container,
+.list {
   width: 100%;
 }
 
@@ -25,6 +25,7 @@ h1 {
 img {
   width: 333px;
   height: 350px;
+  cursor: pointer;
 }
 .film-info {
   margin: 24px;
@@ -41,6 +42,10 @@ a {
 h3 {
   font: normal normal bold 25px/30px "Roboto";
   margin-bottom: 14px;
+  cursor: pointer;
+}
+h3:active {
+  outline: none;
 }
 
 p {
@@ -79,4 +84,4 @@ a {
   .thumbnail:not(:nth-child(3n)) {
     margin-right: 0;
   }
-}
+} */
