@@ -1,10 +1,11 @@
 <div
   class="container d-flex flex-column justify-content-center align-items-center"
 >
-  <h1>Planets</h1>
-  <div class="film-list d-flex flex-row flex-wrap">
+  <h1 class="h1-list">Planets</h1>
+  <div class="list d-flex flex-row flex-wrap">
     <div class="thumbnail d-flex flex-column" *ngFor="let planet of planets">
       <img
+        class="img-list"
         src="{{ planet.image }}"
         alt="movie image"
         [routerLink]="['/planeten', planet.id]"

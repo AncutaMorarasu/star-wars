@@ -42,8 +42,11 @@
   </div>
   <div class="extras">
     <h3>Filme:</h3>
-    <app-film-link *ngFor="let film of character?.films" [filmLink]="film">
-    </app-film-link>
+    <div class="extras-films">
+      <app-film-link *ngFor="let film of character?.films" [filmLink]="film">
+      </app-film-link>
+      <app-add-film></app-add-film>
+    </div>
 
     <h3 *ngIf="character?.starships.length != 0">Raumschiffe:</h3>
     <app-starships-link

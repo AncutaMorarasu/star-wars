@@ -23,15 +23,19 @@
   </div>
   <div class="extras">
     <h3>Charaktere:</h3>
-    <app-character-link
-      *ngFor="let character of movie?.characters"
-      [link]="character"
-    ></app-character-link>
+    <div class="">
+      <app-character-link
+        *ngFor="let character of movie?.characters"
+        [link]="character"
+      ></app-character-link>
+      <app-add-character class="d-inline-block"></app-add-character>
+    </div>
     <h3>Planete:</h3>
     <app-planets-link
       *ngFor="let planet of movie?.planets"
       [planetLink]="planet"
     ></app-planets-link>
+
     <h3>Raumschiffe:</h3>
     <app-starships-link
       *ngFor="let starship of movie?.starships"

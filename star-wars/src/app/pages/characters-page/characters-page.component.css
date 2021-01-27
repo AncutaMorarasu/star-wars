@@ -1,5 +1,5 @@
-.container,
-.film-list {
+/* .container,
+.list {
   width: 100%;
 }
 
@@ -68,11 +68,11 @@ a {
   }
   img,
   .thumbnail,
-  .film-list {
+  .list {
     width: 320px;
   }
 
-  .film-list {
+  .list {
     flex-direction: column;
   }
 
@@ -84,4 +84,4 @@ a {
   .thumbnail:not(:nth-child(3n)) {
     margin-right: 0;
   }
-}
+} */

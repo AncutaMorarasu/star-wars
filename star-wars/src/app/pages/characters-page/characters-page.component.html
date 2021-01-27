@@ -1,13 +1,14 @@
 <div
   class="container d-flex flex-column justify-content-center align-items-center"
 >
-  <h1>Charaktere</h1>
-  <div class="film-list d-flex flex-row flex-wrap">
+  <h1 class="h1-list">Charaktere</h1>
+  <div class="list d-flex flex-row flex-wrap">
     <div
       class="thumbnail d-flex flex-column"
       *ngFor="let character of characters"
     >
       <img
+        class="img-list"
         src="{{ character.image }}"
         alt="character image"
         [routerLink]="['/charaktere', character.id]"
