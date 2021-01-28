@@ -4,35 +4,39 @@
   <ng-template #content let-modal class="film-modal">
     <div class="modal-container">
       <div class="content-modal">
-        <h4 class="modal-title h4-modal">Film hinzufügen</h4>
+        <h4 class="modal-title h4-modal">Planet hinzufügen</h4>
 
         <div class="modal-body m-body">
           <div>
-            <label class="label-modal" for="film-title">Titel</label>
+            <label class="label-modal" for="planet-name">Name</label>
             <input
               class="input-modal"
               type="text"
-              name="film-title"
-              id="film-title"
-              placeholder="Titel eingeben"
+              name="planet-name"
+              id="planet-name"
+              placeholder="Name eingeben"
             />
           </div>
           <div>
-            <label class="label-modal" for="film-director">Director</label>
-            <input
-              class="input-modal"
-              type="text"
-              name="film-director"
-              id="film-director"
-              placeholder="Adresszusatz eingeben"
-            />
-          </div>
-          <div>
-            <label class="label-modal" for="film-producer">Producent</label>
+            <label class="label-modal" for="planet-type">Type</label>
             <select
               class="form-select select-modal"
-              name="film-producer"
-              id="producer"
+              name="planet-type"
+              id="planet-type"
+            >
+              <i class="fas fa-sort"></i>
+              <option selected value="desert">Desert</option>
+              <option value="frozen">Frozen</option>
+              <option value="mountain">Mountain</option>
+              <option value="tundra">Tundra</option>
+            </select>
+          </div>
+          <div>
+            <label class="label-modal" for="planet-creator">Producent</label>
+            <select
+              class="form-select select-modal"
+              name="planet-creator"
+              id="planet-creator"
             >
               <i class="fas fa-sort"></i>
               <option selected value="George Lucas">George Lucas</option>
@@ -41,35 +45,34 @@
               <option value="Howard G. Kazanjian">Howard G. Kazanjian</option>
             </select>
           </div>
+
           <div>
-            <label class="label-modal" for="erscheinungsdatum"
-              >Erscheinungsdatum</label
-            >
+            <label class="label-modal" for="genre">Genre</label>
             <input
               class="input-modal input-narrow"
               type="text"
               maxlength="4"
-              name="erscheinungsdatum"
-              id="erscheinungsdatum"
-              placeholder="YYYY"
+              name="genre"
+              id="genre"
+              placeholder="Science Fiction"
             />
           </div>
 
           <div>
-            <label class="label-modal" for="beschreibung">Beschreibung</label>
+            <label class="label-modal" for="race">Race(s)</label>
             <textarea
               class="textarea-modal"
-              name="beschreibung"
-              id="beschreibung"
+              name="race"
+              id="race"
               cols="55"
               rows="4"
-              placeholder="Beschreibung"
+              placeholder="Namen mit Semikolon trennen"
             ></textarea>
           </div>
           <div class="modal-buttons d-flex justify-content-end">
             <p class="tag" (click)="modal.close('Close click')">Abbrechen</p>
             <p class="tag btn-save" (click)="modal.close('Close click')">
-              Film hinzufügen
+              Planet hinzufügen
             </p>
           </div>
         </div>

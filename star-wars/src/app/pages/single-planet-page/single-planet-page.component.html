@@ -1,10 +1,10 @@
 <div class="content">
   <div class="general">
-    <p class="details">Planetdetails</p>
-    <hr />
-    <h1>{{ planet?.name }}</h1>
+    <p class="single-details">Planetdetails</p>
+    <hr class="single-hr" />
+    <h1 class="single-h1">{{ planet?.name }}</h1>
   </div>
-  <div class="film-details d-flex flex-row justify-content-between">
+  <div class="element-details d-flex flex-row justify-content-between">
     <div class="details-left">
       <h3>Details:</h3>
       <p class="details-p m-0">
@@ -27,26 +27,26 @@
       </p>
     </div>
     <img
+      class="single-img"
       src="{{ imgSrc }}"
       alt="character image"
       onerror="this.src = 'assets/pictures/placeholder.png';"
     />
   </div>
   <div class="extras">
-    <h3>Filme:</h3>
+    <h3 class="single-h3">Filme:</h3>
     <app-film-link *ngFor="let film of planet?.films" [filmLink]="film">
     </app-film-link>
-
-    <h3 *ngIf="planet?.residents.length != 0">Residents:</h3>
-    <app-character-link
-      *ngFor="let resident of planet?.residents"
-      [link]="resident"
-    ></app-character-link>
-    <!-- <h3 *ngIf="character?.vehicles.length != 0">Fahrzeuge:</h3>
-      <app-vehicles-link
-        *ngFor="let vehicle of character?.vehicles"
-        [vehiclesLink]="vehicle"
-      >
-      </app-vehicles-link>  -->
+    <app-add-film class="d-inline-block"></app-add-film>
+    <div *ngIf="planet?.residents.length != 0">
+      <h3>Residents:</h3>
+      <div>
+        <app-character-link
+          *ngFor="let resident of planet?.residents"
+          [link]="resident"
+        ></app-character-link>
+        <app-add-character class="d-inline-block"></app-add-character>
+      </div>
+    </div>
   </div>
 </div>

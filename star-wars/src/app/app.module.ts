@@ -23,6 +23,7 @@ import { VehiclesLinkComponent } from './components/vehicles-link/vehicles-link.
 import { FilmLinkComponent } from './components/film-link/film-link.component';
 import { AddFilmComponent } from './components/add-film/add-film.component';
 import { AddCharacterComponent } from './components/add-character/add-character.component';
+import { AddPlanetComponent } from './components/add-planet/add-planet.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
     FilmLinkComponent,
     AddFilmComponent,
     AddCharacterComponent,
+    AddPlanetComponent,
   ],
   imports: [
     BrowserModule,

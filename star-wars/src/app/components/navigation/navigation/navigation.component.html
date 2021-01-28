@@ -9,7 +9,7 @@
       type="button"
       (click)="isMenuCollapsed = !isMenuCollapsed"
     >
-      <i class="fa fa-bars"> </i>
+      <fa-icon class="fa-bars" [icon]="faBars"></fa-icon>
     </button>
 
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">

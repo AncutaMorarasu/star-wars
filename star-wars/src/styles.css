@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+/* Styles related to Films, Characters and Planets pages*/
 .container,
 .list {
   width: 100%;
@@ -79,8 +80,9 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: #10172c;
 }
-
+/* Styles for film, characters and planets tags*/
 .tag {
   display: inline-block;
   width: fit-content;
@@ -97,6 +99,7 @@ a:hover {
   background: #efefef 0% 0% no-repeat padding-box;
   border-radius: 1px;
   color: #10172c;
+  cursor: pointer;
 }
 
 .tag:hover {
@@ -107,15 +110,160 @@ a:hover {
 .tag-home {
   margin: 0 0 0 10px;
 }
+
+/* Styles related to the modal components*/
+.modal-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 2px 6px 12px #00000059;
+  opacity: 1;
+  /* padding: 3rem; */
+  width: 500px;
+  min-height: fit-content;
+  /* max-height: 750px; */
+}
+.m-body {
+  width: 85%;
+}
+
+.content-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h4-modal {
+  margin-top: 2.5rem;
+  text-align: center;
+  font: normal normal bold 25px/30px Roboto;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+.label-modal {
+  display: block;
+  text-align: left;
+  font: normal normal medium 14px/31px Roboto;
+  letter-spacing: 0px;
+  color: #00305a;
+  opacity: 1;
+  margin-bottom: 0;
+}
+.input-modal,
+.select-modal {
+  width: 100%;
+  height: 60px;
+  background: #f1f1f180 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.input-modal,
+.textarea-modal,
+.select-modal {
+  margin-bottom: 1.2rem;
+  padding-left: 30px;
+}
+.select-modal {
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.input-modal,
+.textarea-modal,
+.textarea-modal:focus {
+  border: 2px solid #d0d0d080;
+  outline: none;
+  width: 100%;
+}
+.input-narrow {
+  width: 100%;
+}
+.textarea-modal {
+  resize: none;
+  padding-top: 10px;
+}
+.select-modal {
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  color: #00305a;
+  width: 100%;
+}
+.modal-buttons {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.btn-save {
+  color: #fff;
+  background: #10172c 0% 0% no-repeat padding-box;
+}
+.btn-save:hover {
+  color: #fff;
+}
+/*Styles for the the display of single elements*/
+.general {
+  margin-bottom: 60px;
+}
+.single-details,
+.single-h1 {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+.single-h3 {
+  font: normal normal bold 25px/30px Roboto;
+  cursor: initial;
+}
+
+.singleh3,
+.single-img {
+  margin-top: 40px;
+}
+.single-img {
+  height: 513px;
+  margin: 0 0 50px 50px;
+}
+.single-details {
+  margin-top: 80px;
+  font: normal normal 300 25px/30px Roboto;
+}
+.single-hr {
+  border-bottom: 1px solid #10172c;
+  width: 60px;
+}
+.single-h1 {
+  font: normal normal bold 75px/90px Roboto;
+}
+.element-details {
+  margin-top: 80px;
+}
+
+.element-details,
+.extras {
+  width: 70%;
+  margin: 0 auto;
+}
+.details-left {
+  width: 513px;
+  font: normal normal normal 18px/23px Roboto;
+}
+.details-p {
+  font-weight: bold;
+}
+.details-p > span {
+  font-weight: normal;
+}
+
+.mt {
+  margin-top: 3rem;
+}
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 35px;
-    margin: 55px 0;
+    margin: 35px 0;
   }
   .img-list,
   .thumbnail,
   .list {
     width: 320px;
+    height: auto;
   }
 
   .list {
@@ -136,5 +284,72 @@ a:hover {
     line-height: 10px;
     padding: 12px;
     margin: 0px 15px 15px 0;
+  }
+  .modal-container {
+    width: 100%;
+    padding: 0;
+    min-height: fit-content;
+    max-height: 650px;
+  }
+  .input-modal,
+  .select-modal,
+  .textarea-modal {
+    width: 98%;
+  }
+  .input-narrow {
+    width: 100%;
+  }
+  .input-modal,
+  .select-modal {
+    height: 40px;
+  }
+  .label-modal,
+  .input-modal,
+  .select-modal,
+  .textarea-modal {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .input-modal,
+  .textarea-modal,
+  .select-modal {
+    padding-left: 20px;
+  }
+  .modal-buttons {
+    margin-top: 1rem;
+  }
+
+  .single-h1 {
+    font-size: 35px;
+    line-height: inherit;
+  }
+  .single-details {
+    margin-top: 40px;
+  }
+  .general {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .general p,
+  .single-h3 {
+    font-size: 22px;
+  }
+  .single-img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+  }
+  .element-details {
+    flex-direction: column !important;
+  }
+  .details-left {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .single-h3,
+  .single-img {
+    margin-top: 20px;
   }
 }
