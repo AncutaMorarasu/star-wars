@@ -1,0 +1,93 @@
+/*Styles for the the display of single elements*/
+.general {
+  margin-bottom: 60px;
+}
+.single-details,
+.single-h1 {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+.single-h3 {
+  font: normal normal bold 25px/30px Roboto;
+  cursor: initial;
+}
+
+.single-img {
+  margin-top: 40px;
+}
+.single-img {
+  height: 513px;
+  margin: 0 0 50px 50px;
+}
+.single-details {
+  margin-top: 80px;
+  font: normal normal 300 25px/30px Roboto;
+}
+.single-hr {
+  border-bottom: 1px solid #10172c;
+  width: 60px;
+}
+.single-h1 {
+  font: normal normal bold 75px/90px Roboto;
+}
+.element-details {
+  margin-top: 80px;
+}
+
+.element-details,
+.extras {
+  width: 70%;
+  margin: 0 auto;
+}
+.details-left {
+  width: 513px;
+  font: normal normal normal 18px/23px Roboto;
+}
+.details-p {
+  font-weight: bold;
+}
+.details-p > span {
+  font-weight: normal;
+}
+
+.mt {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .single-h1 {
+    font-size: 35px;
+    line-height: inherit;
+  }
+  .single-details {
+    margin-top: 40px;
+  }
+  .general {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .general p,
+  .single-h3 {
+    font-size: 22px;
+  }
+  .single-img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+  }
+  .element-details {
+    flex-direction: column !important;
+  }
+  .details-left {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .single-h3,
+  .single-img {
+    margin-top: 20px;
+  }
+}

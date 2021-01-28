@@ -8,7 +8,7 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class PlanetsLinkComponent implements OnInit {
   @Input() planetLink;
-  name;
+  name: any;
   id;
   private computePlanetId() {
     let splitLink = this.planetLink.split('/');

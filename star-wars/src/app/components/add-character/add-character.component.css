@@ -1,3 +1,5 @@
+@import "../../../assets/styles/add-element.css";
+
 .sub-detail {
   width: 48%;
 }
@@ -6,9 +8,6 @@ h4 {
   margin-bottom: 2.5rem;
 }
 
-.btn-save {
-  margin-right: 0;
-}
 @media screen and (max-width: 1024px) {
   .m-body {
     width: 85%;

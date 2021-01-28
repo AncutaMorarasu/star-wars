@@ -8,7 +8,7 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class CharacterLinkComponent implements OnInit {
   @Input() link;
-  name;
+  name: any;
   id;
   private computeCharacterId() {
     let splitLink = this.link.split('/');

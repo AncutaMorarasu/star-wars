@@ -30,7 +30,6 @@ export class SinglePlanetPageComponent implements OnInit {
     });
     this.filmService.getPlanetById(this.planetId).subscribe((data: any) => {
       this.planet = data;
-      console.log(data);
     });
   }
 }

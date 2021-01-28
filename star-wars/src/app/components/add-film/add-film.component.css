@@ -1,6 +1,5 @@
-.btn-save {
-  margin-right: 0;
-}
+@import "../../../assets/styles/add-element.css";
+
 @media (prefers-reduced-motion: reduce) {
   .fade {
     transition: none;
