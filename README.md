@@ -22,9 +22,16 @@ Project is created with:
 	
 ## Setup
 To run this project:
-
+* Clone repository
 ```
-$ clone repository 
+$ https://github.com/AncutaMorarasu/star-wars.git
+```
+* Navigate to star-wars folder
+```
+$ cd star-wars
+```
+* Install dependencies and run (the project runs by default on localhost, port 4200)
+```
 $ npm install
-$ npm start
+$ ng serve / ng serve --open
 ```
