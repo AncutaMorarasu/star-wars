@@ -9,7 +9,10 @@
 This project is a web app that visualises data from [SWAPI](https://swapi.dev/). 
 The app lets you navigate through Star Wars movies, characters and planets and discover details about them. It makes use of master-detail relationships in order to navigate from one element to the other.
 
-	
+SW uses media queries for mobile responsiveness.
+The forms that let you fill in information about new elements are for demonstration purposes as the API does not offer this functionality.
+
+
 ## Technologies
 Project is created with:
 * Angular 9
@@ -18,10 +21,10 @@ Project is created with:
 * FontAwesome
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project:
 
 ```
-$ cd ../lorem
+$ clone repository 
 $ npm install
 $ npm start
 ```
