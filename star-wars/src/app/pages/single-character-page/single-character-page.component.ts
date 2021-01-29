@@ -18,11 +18,7 @@ export class SingleCharacterPageComponent implements OnInit {
     private route: ActivatedRoute,
     private filmService: FilmsApiService
   ) {}
-  addBlur = false; // set 'initial state' based on your needs
 
-  // refreshCss(add: boolean) {
-  //   this.addBlur = add ? true : false;
-  // }
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe((params) => {
       this.charachterId = params['id'];
@@ -36,7 +32,6 @@ export class SingleCharacterPageComponent implements OnInit {
       .getCharacterById(this.charachterId)
       .subscribe((data: any) => {
         this.character = data;
-        console.log(data);
       });
   }
 }

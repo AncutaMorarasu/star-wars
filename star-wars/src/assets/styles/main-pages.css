@@ -1,0 +1,96 @@
+/* Styles related to Films, Characters and Planets pages*/
+.container,
+.list {
+  width: 100%;
+}
+
+h1 {
+  font: normal normal bold 75px/90px "Roboto";
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+.h1-list {
+  margin: 140px 0;
+}
+.thumbnail {
+  height: 527px;
+  width: 333px;
+  background: rgba(187, 187, 187, 0.24) 0% 0% no-repeat padding-box;
+  margin-bottom: 53px;
+}
+
+.thumbnail:not(:nth-child(3n)) {
+  margin-right: 53px;
+}
+
+.img-list {
+  width: 333px;
+  height: 350px;
+  cursor: pointer;
+}
+.film-info {
+  margin: 24px;
+}
+
+h3,
+p,
+a {
+  letter-spacing: 0px;
+  color: #10172c;
+  opacity: 1;
+}
+
+h3 {
+  font: normal normal bold 25px/30px "Roboto";
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+h3:active {
+  outline: none;
+}
+p {
+  font: normal normal normal 14px/17px "Roboto";
+  margin: 0;
+}
+
+.last-p {
+  margin-bottom: 14px;
+}
+
+a {
+  font: normal normal bold 12px/14px Roboto;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #10172c;
+}
+
+@media screen and (max-width: 1024px) {
+  .h1-list {
+    font-size: 35px;
+    margin: 35px 0;
+  }
+  .img-list,
+  .thumbnail,
+  .list {
+    width: 320px;
+    height: auto;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    height: auto;
+    margin-bottom: 53px;
+  }
+
+  .thumbnail:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+}

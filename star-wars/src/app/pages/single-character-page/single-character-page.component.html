@@ -1,12 +1,12 @@
 <div class="content">
   <div class="general">
-    <p class="details">Charakterdetails</p>
-    <hr />
-    <h1>{{ character?.name }}</h1>
+    <p class="single-details">Charakterdetails</p>
+    <hr class="single-hr" />
+    <h1 class="single-h1">{{ character?.name }}</h1>
   </div>
-  <div class="film-details d-flex flex-row justify-content-between">
+  <div class="element-details d-flex flex-row justify-content-between">
     <div class="details-left">
-      <h3>Details:</h3>
+      <h3 class="single-h3">Details:</h3>
       <p class="details-p m-0">
         Größe: <span>{{ character?.height }}</span>
       </p>
@@ -27,7 +27,8 @@
       </p>
 
       <div class="mt-4 d-flex align-items-center">
-        <p class="details-p mr-2">Heimatplanet:</p>
+        <p class="details-p mr-2 home">Heimatplanet:</p>
+
         <app-planets-link
           *ngIf="character"
           [planetLink]="character.homeworld"
@@ -35,25 +36,30 @@
       </div>
     </div>
     <img
+      class="single-img"
       src="{{ imgSrc }}"
       alt="character image"
       onerror="this.src = 'assets/pictures/placeholder.png';"
     />
   </div>
   <div class="extras">
-    <h3>Filme:</h3>
-    <div class="extras-films">
+    <h3 class="single-h3">Filme:</h3>
+    <div>
       <app-film-link *ngFor="let film of character?.films" [filmLink]="film">
       </app-film-link>
       <app-add-film></app-add-film>
     </div>
 
-    <h3 *ngIf="character?.starships.length != 0">Raumschiffe:</h3>
+    <h3 class="single-h3" *ngIf="character?.starships.length != 0">
+      Raumschiffe:
+    </h3>
     <app-starships-link
       *ngFor="let starship of character?.starships"
       [starshipLink]="starship"
     ></app-starships-link>
-    <h3 *ngIf="character?.vehicles.length != 0">Fahrzeuge:</h3>
+    <h3 class="single-h3" *ngIf="character?.vehicles.length != 0">
+      Fahrzeuge:
+    </h3>
     <app-vehicles-link
       *ngFor="let vehicle of character?.vehicles"
       [vehiclesLink]="vehicle"

@@ -8,7 +8,7 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class VehiclesLinkComponent implements OnInit {
   @Input() vehiclesLink;
-  name;
+  name: any;
   id;
   private computeVehiclesId() {
     let splitLink = this.vehiclesLink.split('/');

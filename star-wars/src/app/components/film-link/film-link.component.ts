@@ -8,8 +8,8 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class FilmLinkComponent implements OnInit {
   @Input() filmLink;
-  title;
-  id;
+  title: any;
+  id: any;
   private computeFilmId() {
     let splitLink = this.filmLink.split('/');
     return parseInt(splitLink[splitLink.length - 2]);

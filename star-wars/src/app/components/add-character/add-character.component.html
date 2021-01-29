@@ -1,1 +1,102 @@
 <p class="tag" (click)="openVerticallyCentered(content)">...</p>
+
+<div class="container-modal">
+  <ng-template #content let-modal class="film-modal">
+    <div class="modal-container">
+      <div class="content-modal">
+        <h4 class="modal-title h4-modal">Charakter hinzufügen</h4>
+
+        <div class="modal-body m-body">
+          <div class="">
+            <label class="label-modal" for="character-name">Name</label>
+            <input
+              class="input-modal"
+              type="text"
+              name="character-name"
+              id="character-name"
+              placeholder="Name eingeben"
+            />
+          </div>
+          <div class="d-flex justify-content-between flex-wrap">
+            <div class="sub-detail">
+              <label class="label-modal" for="character-height">Größe</label>
+              <input
+                class="input-modal input-narrow"
+                type="text"
+                name="character-height"
+                id="character-height"
+                placeholder="Meter"
+              />
+            </div>
+            <div class="sub-detail">
+              <label class="label-modal" for="character-weight">Gewicht</label>
+              <input
+                class="input-modal input-narrow"
+                type="text"
+                name="character-weight"
+                id="character-weight"
+                placeholder="Kg"
+              />
+            </div>
+            <div class="sub-detail">
+              <label class="label-modal" for="character-hair">Haarfarbe</label>
+              <input
+                class="input-modal input-narrow"
+                type="text"
+                name="character-hair"
+                id="character-hair"
+                placeholder="Kg"
+              />
+            </div>
+            <div class="sub-detail">
+              <label class="label-modal" for="character-eyes">Augenfarbe</label>
+              <select
+                class="form-select select-modal input-narrow"
+                name="character-eyes"
+                id="character-eyes"
+              >
+                <i class="fas fa-sort"></i>
+                <option selected value="Blau">Blau</option>
+                <option value="Grün">Grün</option>
+                <option value="Braun">Braun</option>
+                <option value="Schwartz">Schwartz</option>
+              </select>
+            </div>
+            <div class="sub-detail">
+              <label class="label-modal" for="geburtsjahr">Geburtsjahr</label>
+              <input
+                class="input-modal input-narrow"
+                type="text"
+                maxlength="4"
+                name="Geburtsjahr"
+                id="Geburtsjahr"
+                placeholder="YYYY"
+              />
+            </div>
+
+            <div class="sub-detail">
+              <label class="label-modal" for="character-gender"
+                >Geschlecht</label
+              >
+              <select
+                class="form-select select-modal input-narrow"
+                name="character-gender"
+                id="character-gender"
+              >
+                <i class="fas fa-sort"></i>
+                <option selected value="Weiblich">Weiblich</option>
+                <option value="Mänlich">Mänlich</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-buttons d-flex justify-content-end">
+            <p class="tag" (click)="modal.close('Close click')">Abbrechen</p>
+            <p class="tag btn-save" (click)="modal.close('Close click')">
+              Character hinzufügen
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

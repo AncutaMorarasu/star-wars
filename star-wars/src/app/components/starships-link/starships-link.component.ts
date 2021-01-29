@@ -8,7 +8,7 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class StarshipsLinkComponent implements OnInit {
   @Input() starshipLink;
-  name;
+  name: any;
   id;
   private computeStarshipId() {
     let splitLink = this.starshipLink.split('/');
