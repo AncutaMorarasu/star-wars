@@ -17,9 +17,11 @@ export class StarshipsLinkComponent implements OnInit {
   constructor(private filmApiService: FilmsApiService) {}
 
   ngOnInit(): void {
-    this.filmApiService.getDetailsByLink(this.starshipLink).subscribe((res) => {
-      this.name = res.name;
-      this.id = this.computeStarshipId();
-    });
+    this.filmApiService
+      .getDetailsByLink(this.starshipLink)
+      .subscribe((res: any) => {
+        this.name = res.name;
+        this.id = this.computeStarshipId();
+      });
   }
 }

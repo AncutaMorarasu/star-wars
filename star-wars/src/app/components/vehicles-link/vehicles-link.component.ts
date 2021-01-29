@@ -17,9 +17,11 @@ export class VehiclesLinkComponent implements OnInit {
   constructor(private filmApiService: FilmsApiService) {}
 
   ngOnInit(): void {
-    this.filmApiService.getDetailsByLink(this.vehiclesLink).subscribe((res) => {
-      this.name = res.name;
-      this.id = this.computeVehiclesId();
-    });
+    this.filmApiService
+      .getDetailsByLink(this.vehiclesLink)
+      .subscribe((res: any) => {
+        this.name = res.name;
+        this.id = this.computeVehiclesId();
+      });
   }
 }

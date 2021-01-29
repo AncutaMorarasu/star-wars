@@ -17,7 +17,7 @@ export class CharacterLinkComponent implements OnInit {
   constructor(private filmApiService: FilmsApiService) {}
 
   ngOnInit(): void {
-    this.filmApiService.getDetailsByLink(this.link).subscribe((res) => {
+    this.filmApiService.getDetailsByLink(this.link).subscribe((res: any) => {
       this.name = res.name;
       this.id = this.computeCharacterId();
     });

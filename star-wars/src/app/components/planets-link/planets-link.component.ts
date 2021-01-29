@@ -17,9 +17,11 @@ export class PlanetsLinkComponent implements OnInit {
   constructor(private filmApiService: FilmsApiService) {}
 
   ngOnInit(): void {
-    this.filmApiService.getDetailsByLink(this.planetLink).subscribe((res) => {
-      this.name = res.name;
-      this.id = this.computePlanetId();
-    });
+    this.filmApiService
+      .getDetailsByLink(this.planetLink)
+      .subscribe((res: any) => {
+        this.name = res.name;
+        this.id = this.computePlanetId();
+      });
   }
 }
