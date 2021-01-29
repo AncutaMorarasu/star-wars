@@ -7,14 +7,15 @@
 
 ## General info
 This project is a web app that visualises data from [SWAPI](https://swapi.dev/). 
-The app lets you navigate through Star Wars movies, characters and planets and discover details about them and makes use of master-detail relationships in order to navigate from one element to the other.
+The app lets you navigate through Star Wars movies, characters and planets and discover details about them. It makes use of master-detail relationships in order to navigate from one element to the other.
 
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Angular 9
+* Bootstrap 4
+* ngBootstrap
+* FontAwesome
 	
 ## Setup
 To run this project, install it locally using npm:
