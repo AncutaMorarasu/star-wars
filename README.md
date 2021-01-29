@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is a web app that visualises data from [SWAPI](#https://swapi.dev/). 
+This project is a web app that visualises data from [SWAPI](https://swapi.dev/). 
 The app lets you navigate through Star Wars movies, characters and planets and discover details about them and makes use of master-detail relationships in order to navigate from one element to the other.
 
 	
