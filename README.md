@@ -14,7 +14,7 @@ The forms that let you fill in information about new elements are for demonstrat
 
 
 ## Technologies
-Project is created with:
+Star Wars is created with:
 * Angular 9
 * Bootstrap 4
 * ngBootstrap
