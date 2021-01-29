@@ -17,13 +17,13 @@
       <p class="details-p m-0">
         Erscheinungsdatum: <span>{{ movie?.release_date }}</span>
       </p>
-      <p class="mt">{{ movie?.opening_crawl }}</p>
+      <p class="opening-crawl mt">{{ movie?.opening_crawl }}</p>
     </div>
     <img class="single-img" src="{{ imgSrc }}" alt="movie image" />
   </div>
   <div class="extras">
     <h3 class="single-h3">Charaktere:</h3>
-    <div class="">
+    <div>
       <app-character-link
         *ngFor="let character of movie?.characters"
         [link]="character"

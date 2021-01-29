@@ -43,9 +43,9 @@
 }
 .details-left {
   width: 513px;
-  font: normal normal normal 18px/23px Roboto;
 }
 .details-p {
+  font: normal normal normal 18px/23px Roboto;
   font-weight: bold;
 }
 .details-p > span {
@@ -84,6 +84,9 @@
   .details-left {
     width: 100%;
     font-size: 15px;
+  }
+  .details-p {
+    font-size: 14px;
   }
 
   .single-h3,

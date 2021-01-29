@@ -1,1 +1,11 @@
 @import "../../../../assets/styles/detail-pages.css";
+
+.opening-crawl {
+  font: normal normal normal 18px/23px Roboto;
+}
+
+@media screen and (max-width: 1024px) {
+  .opening-crawl {
+    font-size: 14px;
+  }
+}
