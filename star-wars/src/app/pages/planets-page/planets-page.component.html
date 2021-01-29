@@ -1,9 +1,20 @@
 <div
   class="container d-flex flex-column justify-content-center align-items-center"
 >
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-fall"
+  >
+    <p class="spinner-text">Loading...</p>
+  </ngx-spinner>
   <h1 class="h1-list">Planets</h1>
   <div class="list d-flex flex-row flex-wrap">
-    <div class="thumbnail d-flex flex-column" *ngFor="let planet of planets">
+    <div
+      class="thumbnail d-flex flex-column hvr-grow"
+      *ngFor="let planet of planets"
+    >
       <img
         class="img-list"
         src="{{ planet.image }}"

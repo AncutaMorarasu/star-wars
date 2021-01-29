@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FilmsApiService } from 'src/app/services/films-api.service';
 import { filmsImg } from 'src/app/src-api';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-single-film',
@@ -15,12 +16,15 @@ export class SingleFilmComponent implements OnInit {
   public movie;
   public romanNumeral: string;
   public imgSrc: string;
+  private url = 'films/';
   constructor(
     private route: ActivatedRoute,
-    private filmService: FilmsApiService
+    private filmService: FilmsApiService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit(): void {
+    this.spinner.show();
     this.routeSub = this.route.params.subscribe((params) => {
       this.episodeId = params['id'];
       for (let romanSrc of filmsImg) {
@@ -30,9 +34,14 @@ export class SingleFilmComponent implements OnInit {
         }
       }
     });
-    this.filmService.getFilmById(this.episodeId).subscribe((data: any) => {
-      this.movie = data;
-    });
+    this.filmService
+      .getElementById(this.url, this.episodeId)
+      .subscribe((data: any) => {
+        if (data) {
+          this.spinner.hide();
+        }
+        this.movie = data;
+      });
   }
 
   ngOnDestroy() {

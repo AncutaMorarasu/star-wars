@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { filmsImg } from 'src/app/src-api';
 import { FilmsApiService } from 'src/app/services/films-api.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-films-page',
@@ -9,10 +10,19 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class FilmsPageComponent implements OnInit {
   movies = [];
-  constructor(private filmService: FilmsApiService) {}
+  private url = 'films/';
+  constructor(
+    private filmService: FilmsApiService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
-    this.filmService.getAllFilms().subscribe((data) => {
+    this.spinner.show();
+
+    this.filmService.getAllElements(this.url).subscribe((data) => {
+      if (data) {
+        this.spinner.hide();
+      }
       this.movies = data['results'];
       this.movies.forEach((entry) => {
         entry['id'] = this.movies.indexOf(entry) + 1;

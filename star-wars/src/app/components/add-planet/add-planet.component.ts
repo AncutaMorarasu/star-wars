@@ -7,19 +7,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./add-planet.component.css'],
 })
 export class AddPlanetComponent implements OnInit {
-  display = 'none';
-
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true });
-  }
-
-  openModal() {
-    this.display = 'block';
-  }
-  onCloseHandled() {
-    this.display = 'none';
   }
 }
