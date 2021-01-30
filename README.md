@@ -1,27 +1,47 @@
-# StarWars
+# Star Wars
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+## Table of contents
 
-## Development server
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## General info
 
-## Code scaffolding
+This project is a web app that visualises data from [SWAPI](https://swapi.dev/).
+The app lets you navigate through Star Wars movies, characters and planets and discover details about them. It makes use of master-detail relationships in order to navigate from one element to the other.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+SW uses media queries for mobile responsiveness.
+The forms that let you fill in information about new elements are for demonstration purposes as the API does not offer this functionality.
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Star Wars is created with:
 
-## Running unit tests
+- Angular 9
+- Bootstrap 4
+- ngBootstrap
+- FontAwesome
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup
 
-## Running end-to-end tests
+To run this project:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Clone repository
 
-## Further help
+```
+$ https://github.com/AncutaMorarasu/star-wars.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Navigate to star-wars folder
+
+```
+$ cd star-wars
+```
+
+Install dependencies and run (the project runs by default on localhost, port 4200)
+
+```
+$ npm install
+$ ng serve / ng serve --open
+```
