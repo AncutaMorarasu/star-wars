@@ -12,7 +12,9 @@ This project is a web app that visualises data from [SWAPI](https://swapi.dev/).
 The app lets you navigate through Star Wars movies, characters and planets and discover details about them. It makes use of master-detail relationships in order to navigate from one element to the other.
 
 SW uses media queries for mobile responsiveness.
-The forms that let you fill in information about new elements are for demonstration purposes as the API does not offer this functionality.
+The forms that let you fill in information about new elements are for demonstration purposes only as the API does not offer this functionality.
+User experience is improved by the addition of a loading spinner that persists on the pages until data is loaded from the API.
+Since SWAPI does not offer image sources, I created a local API to match pictures of the films, characters or planets to their IDs and dispay them appropiately.
 
 ## Technologies
 
@@ -22,6 +24,7 @@ Star Wars is created with:
 - Bootstrap 4
 - ngBootstrap
 - FontAwesome
+- ngxSpinner
 
 ## Setup
 
