@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { planetSrc } from 'src/app/src-api';
 import { FilmsApiService } from 'src/app/services/films-api.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-planets-page',
@@ -9,10 +10,18 @@ import { FilmsApiService } from 'src/app/services/films-api.service';
 })
 export class PlanetsPageComponent implements OnInit {
   planets = [];
-  constructor(private filmService: FilmsApiService) {}
+  private url = 'planets/';
+  constructor(
+    private filmService: FilmsApiService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
-    this.filmService.getAllPlanets().subscribe((data: any) => {
+    this.spinner.show();
+    this.filmService.getAllElements(this.url).subscribe((data: any) => {
+      if (data) {
+        this.spinner.hide();
+      }
       this.planets = data['results'];
       this.planets.forEach((entry) => {
         entry['id'] = this.planets.indexOf(entry) + 1;
