@@ -2,6 +2,7 @@
 .container,
 .list {
   width: 100%;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
 }
 
 .h1-list {
-  margin: 140px 0;
+  margin: 100px 0;
 }
 .thumbnail {
   height: 527px;
