@@ -12,6 +12,7 @@ export class FilmLinkComponent implements OnInit {
   id: any;
   private computeFilmId() {
     let splitLink = this.filmLink.split('/');
+
     return parseInt(splitLink[splitLink.length - 2]);
   }
   constructor(private filmApiService: FilmsApiService) {}
